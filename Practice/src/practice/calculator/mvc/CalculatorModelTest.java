@@ -58,6 +58,7 @@ public class CalculatorModelTest {
         model.evaluate(expression);
         String result = model.getCalculationValue();
         Double doubleResult = Double.parseDouble(result);
+        
         // TODO how to check the results are actually within the bounds of Double imprecision
         assertTrue("Incorrect value", doubleResult >= 0.05477590985 && doubleResult <= 0.05477590986);
     }
@@ -79,9 +80,17 @@ public class CalculatorModelTest {
         model.evaluate(expression);
         String result = model.getCalculationValue();
         Double doubleResult = Double.parseDouble(result);
-        System.out.println(doubleResult);
+        
         // TODO how to check the results are actually within the bounds of Double imprecision
         assertTrue("Incorrect value", doubleResult >= 0.05485827005 && doubleResult <= 0.05485827007);
+    }
+    @Test
+    public void evaluateTangentError() {
+        String expression = "tan(90)";
+        
+        model.evaluate(expression);
+        String result = model.getCalculationValue();
+        assertTrue("Incorrect value", result.equals("Not Defined"));
     }
     @Test
     public void evaluateFactorial() {
