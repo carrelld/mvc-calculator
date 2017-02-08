@@ -10,6 +10,7 @@ import java.util.regex.Matcher;
 
 public class CalculatorModel {
 
+    // make an actual factory to generate concrete objects rather than global variable
     public static final EvaluationStrategy EVAL_STRAT_RECURSIVE = new RecursiveParser();
     
     // TODO implement a "history" for the calculator to cache and recall previous operations

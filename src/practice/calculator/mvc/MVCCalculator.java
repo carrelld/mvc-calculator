@@ -7,8 +7,8 @@ public class MVCCalculator {
         CalculatorController swingCalc = new CalculatorController(new SwingView(), new CalculatorModel());
         swingCalc.initialize();
         
-//        CalculatorController consoleCalc = new CalculatorController(new ConsoleView(System.in), new CalculatorModel());
-//        consoleCalc.initialize();
+        CalculatorController consoleCalc = new CalculatorController(new ConsoleView(System.in), new CalculatorModel());
+        consoleCalc.initialize();
         
     }
     
